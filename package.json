@@ -39,5 +39,8 @@
     "jshint-stylish": "^2.0.1",
     "mocha": "^2.2.5",
     "watchify": "^3.2.3"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0"
   }
 }
