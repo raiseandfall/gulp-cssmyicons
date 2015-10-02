@@ -1,7 +1,10 @@
 'use strict';
 
-var gulp = require('gulp');
+var gutil = require('gulp-util');
 
-module.exports = function() {
+var PLUGIN_NAME = 'gulp-cssmyicons';
+
+module.exports = function(opts) {
 
 };
+
