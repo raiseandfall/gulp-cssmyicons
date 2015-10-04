@@ -43,7 +43,22 @@ describe('gulp cssmyicons', function() {
   });
 
   it('should generate icons path with a prefix to the path', function() {
+    gulp.src(__dirname + '/fixtures/*.svg')
+      .pipe(cssMyIcons('icons.css', {
+        prefix: '/tests/fixtures/'
+      }).on('error', function(err) {
+        console.log('err:', err);
+      }))
+      .pipe(gulp.dest('./'))
+      .pipe(es.wait(function() {
+        assert.equal(
+          fs.readFileSync('icons.css', 'utf8'),
+          fs.readFileSync('tests/mocks/icons-prefix.css', 'utf8')
+        );
 
+        fs.unlinkSync('icons.css');
+        done();
+      }));
   });
 
 });
