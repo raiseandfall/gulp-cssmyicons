@@ -4,9 +4,9 @@
   "description": "Gulp plugin to generate a CSS for SVG icons",
   "main": "index.js",
   "scripts": {
-    "hint": "jshint --reporter=node_modules/jshint-stylish index.js",
+    "hint": "jshint --reporter=node_modules/jshint-stylish/index.js index.js",
     "dev": "npm run watch",
-    "test": "mocha tests/",
+    "test": "mocha tests/tests.js",
     "watch": "watchify **/*.js -o 'npm run hint && npm run test'"
   },
   "engines": {
@@ -34,13 +34,15 @@
   },
   "homepage": "https://github.com/raiseandfall/gulp-cssmyicons",
   "devDependencies": {
+    "event-stream": "^3.3.1",
+    "gulp": "^3.9.0",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.0.1",
     "mocha": "^2.2.5",
-    "watchify": "^3.2.3",
-    "gulp": "^3.9.0"
+    "watchify": "^3.2.3"
   },
   "dependencies": {
-    "gulp-util": "^3.0.6"
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0"
   }
 }
