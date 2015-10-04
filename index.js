@@ -30,7 +30,6 @@ module.exports = function(file, opts) {
 
   var getCSS = function(el, prefix) {
     // Path
-    prefix = prefix || '';
     var path = el.split('/'),
       file = path[path.length-1].split('.'),
       filenameNoExt = file[0],
@@ -45,7 +44,7 @@ module.exports = function(file, opts) {
       return;
     }
 
-    iconsCSS += getCSS(file.relative);
+    iconsCSS += getCSS(file.relative, opts.prefix || '');
 
     cb();
   }
@@ -57,7 +56,7 @@ module.exports = function(file, opts) {
       return;
     }
 
-    this.push(new File({ path: file, contents: new Buffer(iconsCSS) }));
+    this.push(new File({ path: fileName, contents: new Buffer(iconsCSS) }));
 
     cb();
   }

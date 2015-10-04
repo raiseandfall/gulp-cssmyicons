@@ -25,12 +25,12 @@ describe('gulp cssmyicons', function() {
       }));
   });
 
-  it('should generate a CSS file and move it to a destination directory', function() {
+  it('should generate a CSS file and move it to a destination directory', function(done) {
     gulp.src(__dirname + '/fixtures/*.svg')
       .pipe(cssMyIcons('icons.css').on('error', function(err) {
         console.log('err:', err);
       }))
-      .pipe(gulp.dest('tests/'))
+      .pipe(gulp.dest('./tests/'))
       .pipe(es.wait(function() {
         assert.equal(
           fs.readFileSync('tests/icons.css', 'utf8'),
@@ -42,7 +42,7 @@ describe('gulp cssmyicons', function() {
       }));
   });
 
-  it('should generate icons path with a prefix to the path', function() {
+  it('should generate a CSS file with a prefix to the icons path', function(done) {
     gulp.src(__dirname + '/fixtures/*.svg')
       .pipe(cssMyIcons('icons.css', {
         prefix: '/tests/fixtures/'
