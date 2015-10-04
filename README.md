@@ -13,9 +13,39 @@
 ## [CHANGELOG](./CHANGELOG.md)
 
 ## INSTALL
+```shell
+$ npm install gulp-cssmyicons --save-dev
+```
 
 ## USAGE
+```js
+var cssMyIcons = require('gulp-cssmyicons');
+
+gulp.task('scripts', function() {
+  return gulp.src('images/*.svg')
+    .pipe(cssMyIcons('icons.css'))
+    .pipe(gulp.dest('./dist/css/'))
+});
+```
 
 ## OPTIONS
 
+### cssMyIcons(file, options)
+
+#### file
+Type: `String`  
+_Required_  
+
+The icons CSS filename
+
+#### options.prefix
+Type: `String`  
+_Optional_  
+
+Prefix to add at the beginning of the icons path (see tests)
+
+
 ## CONTRIBUTE
+```shell
+$ npm run test
+```
