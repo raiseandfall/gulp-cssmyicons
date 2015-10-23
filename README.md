@@ -47,3 +47,6 @@ Prefix to add at the beginning of the icons path (see tests)
 ```shell
 $ npm run test
 ```
+
+## LICENSE
+MIT
