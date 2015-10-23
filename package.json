@@ -1,6 +1,6 @@
 {
   "name": "gulp-cssmyicons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gulp plugin to generate a CSS for SVG icons",
   "main": "index.js",
   "scripts": {
