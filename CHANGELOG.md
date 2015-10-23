@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.2
+- [TEST] Added node 4.0 & 4.2 on travis config
+
 ## v1.0.1
 - [DOC] Updated documentation
 
