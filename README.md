@@ -21,7 +21,7 @@ $ npm install gulp-cssmyicons --save-dev
 ```js
 var cssMyIcons = require('gulp-cssmyicons');
 
-gulp.task('scripts', function() {
+gulp.task('icons', function() {
   return gulp.src('images/*.svg')
     .pipe(cssMyIcons('icons.css'))
     .pipe(gulp.dest('./dist/css/'))
