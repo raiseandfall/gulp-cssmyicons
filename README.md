@@ -1,6 +1,6 @@
 # CSS my icons  
 
-[![Build Status](https://travis-ci.org/raiseandfall/gulp-cssmyicons.svg)](https://travis-ci.org/raiseandfall/gulp-cssmyicons)
+[![Build Status](https://travis-ci.org/raiseandfall/gulp-cssmyicons.svg)](https://travis-ci.org/raiseandfall/gulp-cssmyicons) [![Downloads](https://img.shields.io/npm/dt/gulp-cssmyicons.svg)](https://www.npmjs.com/package/gulp-cssmyicons)
 
 > [Gulp](http://gulpjs.com/) plugin to generate a CSS file for SVG icons used as background-image:
 
